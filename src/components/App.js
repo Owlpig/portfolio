@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Hero from './Hero';
+import Home from './Home';
 import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
@@ -26,11 +26,7 @@ function App() {
 
   return (
     <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
-      <Hero />
-      <About />
-      <Projects />
-      <Contact />
-      <Footer />
+      <Home />
     </PortfolioProvider>
   );
 }

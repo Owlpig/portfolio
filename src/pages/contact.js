@@ -1,53 +1,43 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
-// markup
 const Contact = () => {
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <>
+    <Contact />
+    <section id="contact" className="four">
+        <div className="container">
+          <header>
+            <h2>Contact</h2>
+          </header>
+
+          <p>
+            The element of time, sem ante ullamcorper dolor nulla quam placerat
+            viverra environment is not with our customers. Free makeup and skirt
+            until the mouse. Japan this innovative and ultricies carton salad
+            clinical ridiculous now passes from enhanced. Mauris pot innovative
+            care for my pain.
+          </p>
+
+          <form method="post" action="#">
+            <div className="row">
+              <div className="col-6 col-12-mobile">
+                <input type="text" name="name" placeholder="Name" />
+              </div>
+              <div className="col-6 col-12-mobile">
+                <input type="text" name="email" placeholder="Email" />
+              </div>
+              <div className="col-12">
+                <textarea name="message" placeholder="Message" />
+              </div>
+              <div className="col-12">
+                <input type="submit" value="Send Message" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </>
   )
 }
 

@@ -1,53 +1,83 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
 // markup
 const Projects = () => {
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <>
+    <Projects />
+    <section id="portfolio" className="two">
+        <div className="container">
+          <header>
+            <h2>Portfolio</h2>
+          </header>
+
+          <p>
+            Life will feel it is always a great need for eu valley, the valley
+            CNN ridiculous smile at any time chat mainstream clinical homes.
+            Mauris floor was very warm and we need it. One customer now nibh
+            Bureau dark pools behavior.
+          </p>
+
+          <div className="row">
+            <div className="col-4 col-12-mobile">
+              <article className="item">
+                <a href="/#" className="image fit">
+                  <img src={''} alt="" />
+                </a>
+                <header>
+                  <h3>Ipsum Feugiat</h3>
+                </header>
+              </article>
+              <article className="item">
+                <a href="/#" className="image fit">
+                  <img src={''} alt="" />
+                </a>
+                <header>
+                  <h3>Rhoncus Semper</h3>
+                </header>
+              </article>
+            </div>
+            <div className="col-4 col-12-mobile">
+              <article className="item">
+                <a href="/#" className="image fit">
+                  <img src={''} alt="" />
+                </a>
+                <header>
+                  <h3>Magna Nullam</h3>
+                </header>
+              </article>
+              <article className="item">
+                <a href="/#" className="image fit">
+                  <img src={''} alt="" />
+                </a>
+                <header>
+                  <h3>Natoque Vitae</h3>
+                </header>
+              </article>
+            </div>
+            <div className="col-4 col-12-mobile">
+              <article className="item">
+                <a href="/#" className="image fit">
+                  <img src={''} alt="" />
+                </a>
+                <header>
+                  <h3>Dolor Penatibus</h3>
+                </header>
+              </article>
+              <article className="item">
+                <a href="/#" className="image fit">
+                  <img src={''} alt="" />
+                </a>
+                <header>
+                  <h3>Orci Convallis</h3>
+                </header>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   )
 }
 

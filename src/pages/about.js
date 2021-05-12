@@ -1,53 +1,33 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
 // markup
 const About = () => {
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <>
+  <About />
+  <section id="about" className="three">
+        <div className="container">
+          <header>
+            <h2>About Me</h2>
+          </header>
+
+          <a href="/#" className="image featured">
+            <img src={''} alt="" />
+          </a>
+
+          <p>
+            Developers football competition in diameter big price to layer the
+            pot. Chavez ultricies care who wants to CNN. Lobortis elementum
+            aliquet eget a den of which they do not hold it in hatred developers
+            nor the mountains of the deposit slip. The element of time, sem ante
+            ullamcorper dolor nulla quam placerat viverra environment is not
+            with our customers. Free makeup and skirt until the mouse or
+            partners or to decorate each targeted.
+          </p>
+        </div>
+      </section>
+  </>
   )
 }
 
