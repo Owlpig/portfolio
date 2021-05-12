@@ -17,6 +17,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
+    "@sideway/address": "^4.1.2",
     "gatsby": "^3.4.1",
     "gatsby-plugin-image": "^1.4.1",
     "gatsby-plugin-mdx": "^2.4.0",
@@ -26,11 +27,21 @@
     "gatsby-plugin-sharp": "^3.4.2",
     "gatsby-plugin-sitemap": "^4.0.0",
     "gatsby-source-filesystem": "^3.4.0",
-    "gatsby-transformer-sharp": "^3.4.0",
+    "joi": "^17.4.0",
     "netlify-cms-app": "^2.15.4",
-    "react": "^17.0.1",
+    "react-bootstrap": "^1.6.0",
     "react-dom": "^17.0.1",
+    "react-github-btn": "^1.2.0",
     "react-helmet": "^6.1.0",
+    "react-reveal": "^1.2.2",
+    "react-scroll": "^1.8.2",
+    "react-scrollspy": "^3.4.3",
+    "react-tilt": "^0.1.4",
     "sass": "^1.32.12"
+  },
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "eslint-config-salt": "^1.1.0",
+    "prettier": "^2.3.0"
   }
 }
