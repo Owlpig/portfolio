@@ -1,44 +1,47 @@
-import * as React from "react"
+import React, { useContext, useState, useEffect } from 'react';
+import Layout from '../components/Layout';
+import PageFooter from '../components/PageFooter';
+import SideBar from '../components/SideBar';
+import Contact from '../components/Contact';
 import { Link } from "gatsby"
+import { PortfolioProvider } from '../context/context';
+import { headData, heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
 
-const Contact = () => {
+const sections = [
+  { id: '/', name: 'Home', icon: 'fa-home' },
+  { id: 'projects', name: 'Portfolio', icon: 'fa-th' },
+  { id: 'about', name: 'About Me', icon: 'fa-user' },
+  { id: 'contact', name: 'Contact', icon: 'fa-envelope' },
+];
+
+const ContactPage = () => {
+  const [hero, setHero] = useState({});
+  const [head, setHead] = useState({});
+  const [about, setAbout] = useState({});
+  const [projects, setProjects] = useState([]);
+  const [contact, setContact] = useState({});
+  const [footer, setFooter] = useState({});
+
+  useEffect(() => {
+    setHero({ ...heroData });
+    setHead({ ...headData })
+    setAbout({ ...aboutData });
+    setProjects([...projectsData]);
+    setContact({ ...contactData });
+    setFooter({ ...footerData });
+  }, []);
+
   return (
     <>
-    <Contact />
-    <section id="contact" className="four">
-        <div className="container">
-          <header>
-            <h2>Contact</h2>
-          </header>
-
-          <p>
-            The element of time, sem ante ullamcorper dolor nulla quam placerat
-            viverra environment is not with our customers. Free makeup and skirt
-            until the mouse. Japan this innovative and ultricies carton salad
-            clinical ridiculous now passes from enhanced. Mauris pot innovative
-            care for my pain.
-          </p>
-
-          <form method="post" action="#">
-            <div className="row">
-              <div className="col-6 col-12-mobile">
-                <input type="text" name="name" placeholder="Name" />
-              </div>
-              <div className="col-6 col-12-mobile">
-                <input type="text" name="email" placeholder="Email" />
-              </div>
-              <div className="col-12">
-                <textarea name="message" placeholder="Message" />
-              </div>
-              <div className="col-12">
-                <input type="submit" value="Send Message" />
-              </div>
-            </div>
-          </form>
-        </div>
-      </section>
+      <Layout>
+        <SideBar sections={sections} />
+        <PortfolioProvider value={{ hero, head, about, projects, contact, footer }}>
+          <Contact />
+        </PortfolioProvider>
+        <PageFooter />
+      </Layout>
     </>
   )
 }
 
-export default Contact
+export default ContactPage

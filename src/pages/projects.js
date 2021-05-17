@@ -1,84 +1,48 @@
-import * as React from "react"
+import React, { useContext, useState, useEffect } from 'react';
+import Layout from '../components/Layout';
+import PageFooter from '../components/PageFooter';
+import SideBar from '../components/SideBar';
+import Projects from '../components/Projects';
 import { Link } from "gatsby"
+import { PortfolioProvider } from '../context/context';
+import { headData, heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
+
+const sections = [
+  { id: '/', name: 'Home', icon: 'fa-home' },
+  { id: 'projects', name: 'Portfolio', icon: 'fa-th' },
+  { id: 'about', name: 'About Me', icon: 'fa-user' },
+  { id: 'contact', name: 'Contact', icon: 'fa-envelope' },
+];
 
 // markup
-const Projects = () => {
+const ProjectsPage = () => {
+  const [hero, setHero] = useState({});
+  const [head, setHead] = useState({});
+  const [about, setAbout] = useState({});
+  const [projects, setProjects] = useState([]);
+  const [contact, setContact] = useState({});
+  const [footer, setFooter] = useState({});
+
+  useEffect(() => {
+    setHero({ ...heroData });
+    setHead({ ...headData })
+    setAbout({ ...aboutData });
+    setProjects([...projectsData]);
+    setContact({ ...contactData });
+    setFooter({ ...footerData });
+  }, []);
+
   return (
     <>
-    <Projects />
-    <section id="portfolio" className="two">
-        <div className="container">
-          <header>
-            <h2>Portfolio</h2>
-          </header>
-
-          <p>
-            Life will feel it is always a great need for eu valley, the valley
-            CNN ridiculous smile at any time chat mainstream clinical homes.
-            Mauris floor was very warm and we need it. One customer now nibh
-            Bureau dark pools behavior.
-          </p>
-
-          <div className="row">
-            <div className="col-4 col-12-mobile">
-              <article className="item">
-                <a href="/#" className="image fit">
-                  <img src={''} alt="" />
-                </a>
-                <header>
-                  <h3>Ipsum Feugiat</h3>
-                </header>
-              </article>
-              <article className="item">
-                <a href="/#" className="image fit">
-                  <img src={''} alt="" />
-                </a>
-                <header>
-                  <h3>Rhoncus Semper</h3>
-                </header>
-              </article>
-            </div>
-            <div className="col-4 col-12-mobile">
-              <article className="item">
-                <a href="/#" className="image fit">
-                  <img src={''} alt="" />
-                </a>
-                <header>
-                  <h3>Magna Nullam</h3>
-                </header>
-              </article>
-              <article className="item">
-                <a href="/#" className="image fit">
-                  <img src={''} alt="" />
-                </a>
-                <header>
-                  <h3>Natoque Vitae</h3>
-                </header>
-              </article>
-            </div>
-            <div className="col-4 col-12-mobile">
-              <article className="item">
-                <a href="/#" className="image fit">
-                  <img src={''} alt="" />
-                </a>
-                <header>
-                  <h3>Dolor Penatibus</h3>
-                </header>
-              </article>
-              <article className="item">
-                <a href="/#" className="image fit">
-                  <img src={''} alt="" />
-                </a>
-                <header>
-                  <h3>Orci Convallis</h3>
-                </header>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
+       <Layout>
+        <SideBar sections={sections} />
+        <PortfolioProvider value={{ hero, head, about, projects, contact, footer }}>
+          <Projects />
+        </PortfolioProvider>
+        <PageFooter />
+      </Layout>
     </>
   )
 }
 
-export default Projects
+export default ProjectsPage

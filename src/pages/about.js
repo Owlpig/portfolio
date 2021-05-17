@@ -1,36 +1,50 @@
-import * as React from "react"
+import React, { useContext, useState, useEffect } from 'react';
+import Layout from '../components/Layout';
+import PageFooter from '../components/PageFooter';
+import SideBar from '../components/SideBar';
+import About from '../components/About';
 import { Link } from "gatsby"
+import { PortfolioProvider } from '../context/context';
+import { headData, heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
+
+const sections = [
+  { id: '/', name: 'Home', icon: 'fa-home' },
+  { id: 'projects', name: 'Portfolio', icon: 'fa-th' },
+  { id: 'about', name: 'About Me', icon: 'fa-user' },
+  { id: 'contact', name: 'Contact', icon: 'fa-envelope' },
+];
 
 // markup
-const About = () => {
+const AboutPage = () => {
+  const [hero, setHero] = useState({});
+  const [head, setHead] = useState({});
+  const [about, setAbout] = useState({});
+  const [projects, setProjects] = useState([]);
+  const [contact, setContact] = useState({});
+  const [footer, setFooter] = useState({});
+
+  useEffect(() => {
+    setHero({ ...heroData });
+    setHead({ ...headData })
+    setAbout({ ...aboutData });
+    setProjects([...projectsData]);
+    setContact({ ...contactData });
+    setFooter({ ...footerData });
+  }, []);
+
   return (
     <>
-  <About />
-  <section id="about" className="three">
-        <div className="container">
-          <header>
-            <h2>About Me</h2>
-          </header>
-
-          <a href="/#" className="image featured">
-            <img src={''} alt="" />
-          </a>
-
-          <p>
-            Developers football competition in diameter big price to layer the
-            pot. Chavez ultricies care who wants to CNN. Lobortis elementum
-            aliquet eget a den of which they do not hold it in hatred developers
-            nor the mountains of the deposit slip. The element of time, sem ante
-            ullamcorper dolor nulla quam placerat viverra environment is not
-            with our customers. Free makeup and skirt until the mouse or
-            partners or to decorate each targeted.
-          </p>
-        </div>
-      </section>
+      <Layout>
+        <SideBar sections={sections} />
+        <PortfolioProvider value={{ hero, head, about, projects, contact, footer }}>
+          <About />
+        </PortfolioProvider>
+        <PageFooter />
+      </Layout>
   </>
   )
 }
 
-export default About
+export default AboutPage
 
 

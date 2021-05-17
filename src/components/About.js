@@ -23,14 +23,14 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about">
-      <Container>
+    <section id="main" className="three">
+      <Container id="about">
         <Title title="About Me" />
         <Row className="about-wrapper">
           <Col md={6} sm={12}>
             <Fade bottom duration={1000} delay={600} distance="30px">
-              <div className="about-wrapper__image">
-                <AboutImg alt="profile picture" filename={img} />
+              <div className="about-wrapper__image" >
+                <AboutImg alt="profile picture" className="image featured" filename={img} />
               </div>
             </Fade>
           </Col>

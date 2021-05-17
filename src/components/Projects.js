@@ -23,15 +23,16 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects">
-      <Container>
+    <>
+    <section id="main" className="two">
+      <Container id="projects">
         <div className="project-wrapper">
           <Title title="Projects" />
           {projects.map((project) => {
             const { title, info, info2, url, repo, img, id } = project;
 
             return (
-              <Row key={id}>
+              <Row className='item' key={id}>
                 <Col lg={4} sm={12}>
                   <Fade
                     left={isDesktop}
@@ -113,6 +114,7 @@ const Projects = () => {
         </div>
       </Container>
     </section>
+    </>
   );
 };
 
