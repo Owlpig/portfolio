@@ -27,14 +27,14 @@ const Header = () => {
             <div className="container">
               <header>
                 <h2 className="alt">
-                  Hi! I'm <strong>Henry</strong>
+                  Hi! I'm <strong>Henry™</strong>
                   <br />
                   Web developer
                 </h2>
                 <p>I have made few things check it out.</p>
               </header>
               <footer>
-                <Link type="id" to='/projects/' element={'portfolio'} className="button">
+                <Link type="id" to='/projects/' element={'portfolio'} className="cta-btn cta-btn--hero">
                   Show me
                 </Link>
               </footer>
