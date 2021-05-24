@@ -29,29 +29,38 @@ export const projectsData = [
   {
     id: nanoid(),
     img: 'project.jpg',
-    title: '',
-    info: '',
+    title: 'StreamCompass',
+    info: 'MVP fullstack app for a streaming service search engine. Includes authorisation and login-functionality, searching by keyword, and CRUD operations for favourites and reviews. Built in ReactJS with an ExpressJS backend and MongoDB database. ',
     info2: '',
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    repo: 'https://github.com/Owlpig/final-project-StreamCompass', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
     img: 'project.jpg',
-    title: '',
+    title: 'Character Picker',
     info: '',
     info2: '',
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    repo: 'https://github.com/Owlpig/WoW-character-picker', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
     img: 'project.jpg',
-    title: '',
+    title: 'Portfolio',
+    info: '',
+    info2: '',
+    url: '/',
+    repo: 'https://github.com/Owlpig/portfolio', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: 'project.jpg',
+    title: 'ToDo List',
     info: '',
     info2: '',
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    repo: 'https://github.com/Owlpig/todo-react', // if no repo, the button will not show up
   },
 ];
 

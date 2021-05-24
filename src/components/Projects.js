@@ -50,23 +50,24 @@ const Projects = () => {
                         </p>
                         <p className="mb-4">{info2 || ''}</p>
                       </div>
-                      <a
+                      {(<a
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cta-btn cta-btn--hero"
-                        href={url || '#!'}
+                        href={repo}
                       >
-                        See Live
+                        Source Code
                       </a>
+                      )}
 
-                      {repo && (
+                      {url && (
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
                           className="cta-btn text-color-main"
-                          href={repo}
+                          href={url}
                         >
-                          Source Code
+                          See Live
                         </a>
                       )}
                     </div>
