@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import PageFooter from '../components/PageFooter';
 import SideBar from '../components/SideBar';
@@ -6,7 +6,7 @@ import Home from '../components/Home';
 import { Helmet } from 'react-helmet';
 import { PortfolioProvider } from '../context/context';
 import { headData, heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/main.scss';
 
 const sections = [

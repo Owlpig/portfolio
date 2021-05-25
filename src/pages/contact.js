@@ -1,9 +1,8 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import PageFooter from '../components/PageFooter';
 import SideBar from '../components/SideBar';
 import Contact from '../components/Contact';
-import { Link } from "gatsby"
 import { PortfolioProvider } from '../context/context';
 import { headData, heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
 

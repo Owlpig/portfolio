@@ -28,7 +28,7 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
+    img: 'streamcompass.png',
     title: 'StreamCompass',
     info: 'MVP fullstack app for a streaming service search engine. Includes authorisation and login-functionality, searching by keyword, and CRUD operations for favourites and reviews. Built in ReactJS with an ExpressJS backend and MongoDB database. ',
     info2: '',

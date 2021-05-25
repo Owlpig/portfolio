@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 import { Container, Row, Col } from 'react-bootstrap';
 import Title from './Title';
 import AboutImg from './AboutImg';

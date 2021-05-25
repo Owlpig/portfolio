@@ -109,7 +109,7 @@
 	body {
 		background: #fff;
 		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 19pt;
+		font-size: $default-font-size;
 		font-weight: 300;
 		line-height: 1.75em;
 		color: #888;
@@ -126,7 +126,7 @@
 
 	input, textarea, select {
 		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 19pt;
+		font-size: $default-font-size;
 		font-weight: 300;
 		line-height: 1.75em;
 		color: #888;
@@ -148,7 +148,7 @@
 	}
 
 	h2 {
-		font-size: 2em;
+		font-size: $big-font-size;
 		letter-spacing: -1px;
 
 		&.alt {
@@ -613,7 +613,7 @@
 			position: relative;
 			color: #fff;
 			font-weight: 600;
-			font-size: 1em;
+			font-size: $default-font-size;
 			line-height: 1em;
 		}
 
@@ -667,7 +667,7 @@
 					span {
 						position: relative;
 						display: block;
-						font-size: 0.8em;
+						// font-size: 0.8em;
 
 						&:before {
 							position: absolute;
