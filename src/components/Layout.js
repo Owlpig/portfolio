@@ -43,15 +43,15 @@ class Layout extends Component {
         `}
         render={data => (
           <>
-            <Helmet
-              title={data.site.siteMetadata.title}
+            {/* <Helmet
+              title=''
               meta={[
-                { name: 'description', content: 'Eventually' },
+                { name: 'description', content: 'Welcome to my portfolio' },
                 { name: 'keywords', content: 'site, web' },
               ]}
             >
               <html lang="en" />
-            </Helmet>
+            </Helmet> */}
             <div className={isPreloaded ? 'main-body is-preload' : 'main-body'}>
               {children}
             </div>
