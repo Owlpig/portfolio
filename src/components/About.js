@@ -35,7 +35,7 @@ const About = () => {
             </Fade>
           </Col>
           <Col md={6} sm={12}>
-            <Fade direction={isMobile ? 'up' : 'left'} duration={1000} delay={1000}>
+            <Fade direction={isMobile ? 'up' : 'right'} duration={1000} delay={1000}>
               <div className="about-wrapper__info">
                 <p className="about-wrapper__info-text">
                   {paragraphOne ||

@@ -9,26 +9,29 @@ const Contact = () => {
   const { cta, btn, email } = contact;
 
   return (
-    <section id="main" className="four">
-      <Container id="contact">
-        <Title title="Contact" />
-        <Fade direction='up' duration={1000} delay={800}>
-          <div className="contact-wrapper">
-            <p className="contact-wrapper__text">
-              {cta || 'Would you like to work with me? Awesome!'}
-            </p>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-btn cta-btn--resume"
-              href={email ? `mailto:${email}` : 'https://github.com/cobidev/react-simplefolio'}
-            >
-              {btn || "Let's Talk"}
-            </a>
-          </div>
-        </Fade>
-      </Container>
-    </section>
+    <div id="main">
+      <section className="four cover">
+        <Container id="contact">
+          <Title title="Contact" />
+          <Fade direction='up' duration={1000} delay={800}>
+            <div className="contact-wrapper">
+              <p className="contact-wrapper__text">
+                {cta || 'Would you like to work with me? Awesome!'}
+              </p>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta-btn cta-btn--contact"
+                href={email ? `mailto:${email}` : 'https://github.com/cobidev/react-simplefolio'}
+              >
+                {btn || "Let's Talk"}
+              </a>
+            </div>
+          </Fade>
+        </Container>
+      </section>
+    </div>
+    
   );
 };
 

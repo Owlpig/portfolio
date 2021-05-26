@@ -17,11 +17,11 @@ export const heroData = {
 
 // ABOUT DATA
 export const aboutData = {
-  img: 'profile.jpg',
-  paragraphOne: '',
-  paragraphTwo: '',
-  paragraphThree: '',
-  resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
+  img: 'about.jpg',
+  paragraphOne: 'My name is Henry Thomasson Mispelaere and I am a software developer based in Uppsala, Sweden.',
+  paragraphTwo: `I've always been interested in both tech and the creative arts and web development lets me do both. In 2020 I started learning JavaScript and in 2021 I joined the </salt> bootcamp.`,
+  paragraphThree: `In my free time I enjoy video games and baking, which goes well with my drive to finish tasks I've started and enjoy the fruits of my labour.`,
+  resume: '', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
@@ -39,7 +39,7 @@ export const projectsData = [
     id: nanoid(),
     img: 'characterpicker.png',
     title: 'Character Picker',
-    info: 'Fullstack app to help you pick your video-game character. Filters through options based on user selections.',
+    info: 'Fullstack app to help you pick what character to play in the video-game World of Warcraft. Made using the official Battle.net API, ExpressJS backend and React frontend. Filters through the options based on user selections.',
     info2: '',
     url: '',
     repo: 'https://github.com/Owlpig/WoW-character-picker', // if no repo, the button will not show up
@@ -48,7 +48,7 @@ export const projectsData = [
     id: nanoid(),
     img: 'portfolio.png',
     title: 'Portfolio',
-    info: 'This portfolio page. Built with Gatsby and deployed with Netlify.',
+    info: 'This portfolio page. Built with Gatsby and gatsby templates, but remade into an MPA. React add-ons and Bootstrap for styling. Deployed with Netlify.',
     info2: '',
     url: '',
     repo: 'https://github.com/Owlpig/portfolio', // if no repo, the button will not show up

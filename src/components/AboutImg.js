@@ -1,35 +1,35 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const AboutImg = ({ filename, alt }) => (
   <StaticQuery
     query={graphql`
-    query {
-      images: allFile {
-        edges {
-          node {
-            relativePath
-            name
-            childImageSharp {
-              gatsbyImageData(
-                width: 350
-                layout: FIXED
-                )
+      query {
+        images: allFile {
+          edges {
+            node {
+              relativePath
+              name
+              childImageSharp {
+                gatsbyImageData(
+                  width: 350
+                  layout: FIXED
+                  )
+              }
             }
           }
         }
       }
-    }
-  `}
+    `}
     render={(data) => {
       const image = data.images.edges.find((n) => n.node.relativePath.includes(filename));
-
+      console.log(image)
       if (!image) return null;
 
-      const imageFixed = image.node.childImageSharp.fixed;
-      return <Img className="rounded shadow-lg" alt={alt} fixed={imageFixed} />;
+      const imageFixed = image.node.childImageSharp.gatsbyImageData;
+      return <GatsbyImage className="rounded shadow-lg" alt={alt} image={imageFixed} />;
     }}
   />
 );

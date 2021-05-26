@@ -759,7 +759,7 @@
 
 			&.one {
 				background-color: #81918E;
-				background-image: url('../images/peter-van-der-meulen-oZ6D8XwMoR8-unsplash.jpg');
+				background-image: url('../images/homepage-background.jpg');
 			}
 
 			&.two {
@@ -771,7 +771,9 @@
 			}
 
 			&.four {
+        padding-top: 5em;
 				background-color: #e8edec;
+        background-image: url("../images/contact-background.jpg");
 			}
 		}
 	}
@@ -821,6 +823,9 @@
 					&.cover {
 						padding: 5em 0;
 					}
+          &.four {
+            padding-top: 2.5em;
+          }
 				}
 			}
 
@@ -1077,6 +1082,9 @@
 					&.cover {
 						padding: 4em 0;
 					}
+          &.four {
+            padding-top: 2em;
+          }
 				}
 			}
 	}
@@ -1125,6 +1133,9 @@
 							padding: 0 1em;
 						}
 					}
+          &.four {
+            padding-top: 2em;
+          }
 				}
 			}
 
