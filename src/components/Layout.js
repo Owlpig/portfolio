@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../style/main.scss';
 import '../assets/sass/main.scss';
 
 class Layout extends Component {

@@ -5,23 +5,24 @@ import 'gatsby-plugin-image';
 
 const AboutImg = ({ filename, alt }) => (
   <StaticQuery
-    // query={graphql`
-    //   query {
-    //     images: allFile {
-    //       edges {
-    //         node {
-    //           relativePath
-    //           name
-    //           childImageSharp {
-    //             fixed(width: 350) {
-    //               ...GatsbyImageSharpFixed
-    //             }
-    //           }
-    //         }
-    //       }
-    //     }
-    //   }
-    // `}
+    query={graphql`
+    query {
+      images: allFile {
+        edges {
+          node {
+            relativePath
+            name
+            childImageSharp {
+              gatsbyImageData(
+                width: 350
+                layout: FIXED
+                )
+            }
+          }
+        }
+      }
+    }
+  `}
     render={(data) => {
       const image = data.images.edges.find((n) => n.node.relativePath.includes(filename));
 

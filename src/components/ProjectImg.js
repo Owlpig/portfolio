@@ -13,7 +13,10 @@ const ProjectImg = ({ filename, alt }) => (
               relativePath
               name
               childImageSharp {
-                gatsbyImageData(width: 1366)
+                gatsbyImageData(
+                  # width: 1366
+                  layout: FULL_WIDTH
+                  )
               }
             }
           }

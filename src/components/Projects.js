@@ -34,11 +34,9 @@ const Projects = () => {
               <Row key={id}>
                 <Col lg={4} sm={12}>
                   <Fade
-                    left={isDesktop}
-                    bottom={isMobile}
+                    direction={isDesktop ? 'left' : 'up'}
                     duration={1000}
                     delay={500}
-                    distance="30px"
                   >
                     <div className="project-wrapper__text">
                       <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
@@ -74,11 +72,9 @@ const Projects = () => {
                 </Col>
                 <Col lg={8} sm={12}>
                   <Fade
-                    right={isDesktop}
-                    bottom={isMobile}
+                    direction={isMobile ? 'up' : 'right'}
                     duration={1000}
                     delay={1000}
-                    distance="30px"
                   >
                     <div className="project-wrapper__image">
                       <a
