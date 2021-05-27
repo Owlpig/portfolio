@@ -21,15 +21,15 @@ const Header = () => {
 
   return (
     <div id="main">
-      <section id="top" className="one dark cover">
-        <div className="container">
+      <section className="one dark cover">
+        <div id="home" className="container">
           <header>
-            <h2 className="alt">
-              Hi! I'm <strong>Henry™</strong>
+            <h2 className="alt home-title">
+              Hi! I'm <strong>Henry™ </strong>
               <br />
               Web developer
             </h2>
-            <p>I have made few things check it out.</p>
+            <p className='home-text'>I have made few things check it out.</p>
           </header>
           <footer>
             <Link type="id" to='/projects/' element={'portfolio'} className="cta-btn cta-btn--hero">

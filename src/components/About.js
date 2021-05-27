@@ -27,13 +27,13 @@ const About = () => {
       <Container id="about">
         <Title title="About Me" />
         <Row className="about-wrapper">
-          <Col md={6} sm={12}>
+          {isDesktop && <Col md={6} sm={12}>
             <Fade direction='up' duration={1000} delay={600}>
               <div className="about-wrapper__image" >
                 <AboutImg alt="profile picture" className="image featured" filename={img} />
               </div>
             </Fade>
-          </Col>
+          </Col>}
           <Col md={6} sm={12}>
             <Fade direction={isMobile ? 'up' : 'right'} duration={1000} delay={1000}>
               <div className="about-wrapper__info">
@@ -63,6 +63,13 @@ const About = () => {
               </div>
             </Fade>
           </Col>
+          {isMobile && <Col md={6} sm={12}>
+            <Fade direction='up' duration={1000}>
+              <div className="about-wrapper__image" >
+                <AboutImg alt="profile picture" className="image featured" filename={img} />
+              </div>
+            </Fade>
+          </Col>}
         </Row>
       </Container>
     </section>

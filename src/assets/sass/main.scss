@@ -1137,7 +1137,24 @@
             padding-top: 2em;
           }
 				}
+        &.three {
+          margin-bottom: 0;
+        }
 			}
+    /* Home */
+
+      #home {
+        padding: 10rem 0;
+        .home-title {
+          font-size: 2.8rem;
+        }
+        .home-text {
+          font-size: 2rem;
+        }
+        a {
+          font-size: 2rem;
+        }
+      }
 
 		/* Footer */
 
