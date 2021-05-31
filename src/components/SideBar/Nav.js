@@ -8,7 +8,7 @@ export default function Nav({ sections = [] }) {
         {sections.map(s => {
           return (
             <li key={s.id}>
-              <Link to={`../${s.id}`} type="id" element={s.id}  id="top-link">
+              <Link to={`../${s.id}`} type="id" element={s.id} activeClassName='active' id="top-link">
                 <span className={`icon ${s.icon}`}>{s.name}</span>
               </Link>
             </li>

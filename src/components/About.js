@@ -28,7 +28,7 @@ const About = () => {
         <Title title="About Me" />
         <Row className="about-wrapper">
           {isDesktop && <Col md={6} sm={12}>
-            <Fade direction='up' duration={1000} delay={600}>
+            <Fade direction='left' duration={1000} delay={600}>
               <div className="about-wrapper__image" >
                 <AboutImg alt="profile picture" className="image featured" filename={img} />
               </div>
