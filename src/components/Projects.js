@@ -37,6 +37,7 @@ const Projects = () => {
                     direction={isDesktop ? 'left' : 'up'}
                     duration={1000}
                     delay={500}
+                    triggerOnce={isMobile ? true : false}
                   >
                     <div className="project-wrapper__text">
                       <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
@@ -75,6 +76,7 @@ const Projects = () => {
                     direction={isMobile ? 'up' : 'right'}
                     duration={1000}
                     delay={1000}
+                    triggerOnce={isMobile ? true : false}
                   >
                     <div className="project-wrapper__image">
                       <a
