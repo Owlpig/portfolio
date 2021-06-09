@@ -7,8 +7,6 @@ import { Helmet } from 'react-helmet';
 import { PortfolioProvider } from '../context/context';
 import { headData, heroData } from '../data/data';
 
-// activeClassName - for showing which page you'r eon
-
 const sections = [
   { id: '/', name: 'Home', icon: 'fa-home' },
   { id: 'projects', name: 'Portfolio', icon: 'fa-th' },
@@ -29,9 +27,9 @@ const sections = [
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{head.title || 'Gatsby Simplefolio'}</title>
+        <title>{head.title}</title>
         <html lang={head.lang || 'en'} />
-        <meta name="description" content={head.description || 'Gatsby Simplefolio'} />
+        <meta name="description" content={head.description} />
       </Helmet>
       <Layout>
         <SideBar sections={sections} />
