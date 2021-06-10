@@ -28,7 +28,7 @@ const Projects = () => {
         <div className="project-wrapper">
           <Title title="Projects" />
           {projects.map((project) => {
-            const { title, info, info2, url, repo, img, id } = project;
+            const { title, link, info, info2, url, repo, img, id } = project;
 
             return (
               <Row key={id}>
@@ -45,8 +45,10 @@ const Projects = () => {
                         <p className="project-wrapper__text-content">
                           {info ||
                             'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
+                          {link && <a classname='project-wrapper__text-content' href={link}> this </a>}
+                          {info2}
                         </p>
-                        <p className="mb-4">{info2 || ''}</p>
+                        {/* <p className="project-wrapper__text-content">{info2 || ''}</p> */}
                       </div>
                       {(<a
                         target="_blank"

@@ -50,7 +50,8 @@
       }
 
       & p > a {
-        color: $secondary-color;
+        color: $primary-color;
+        font-weight: bold;
       }
     }
 

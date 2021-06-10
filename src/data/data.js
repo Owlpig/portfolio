@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid';
+import React from 'react';
 
 // HEAD DATA
 export const headData = {
@@ -52,6 +53,16 @@ export const projectsData = [
     info2: '',
     url: '',
     repo: 'https://github.com/Owlpig/portfolio', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: 'disney.png',
+    title: 'Disney+ Clone',
+    info: 'Clone of Disney+, built with React, Redux, Firebase and Styled components. Based off',
+    link: 'https://www.youtube.com/watch?v=R_OERlafbmw',
+    info2: 'YouTube tutorial with some refactoring.',
+    url: 'https://disney-clone-c999a.web.app/',
+    repo: 'https://github.com/Owlpig/disney-plus-clone', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
