@@ -3,7 +3,7 @@ import React from 'react';
 
 // HEAD DATA
 export const headData = {
-  title: 'Henry™ | Web Developer', // e.g: 'Name | Developer'
+  title: 'Henry Thomasson Mispelaere | Web Developer', // e.g: 'Name | Developer'
   lang: 'en', // e.g: en, es, fr, jp
   description: 'I am Henry Thomasson Mispelaere, a fullstack JavaScript developer and these are some of my projects', // e.g: Welcome to my website
 };
